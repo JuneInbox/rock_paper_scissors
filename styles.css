@@ -46,4 +46,72 @@
     isolation: isolate;
   }
 
+
+  #scorecontainer {
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+  }
+
+  #maincontainer {
+    width: 100%;
+    height: 100vh;
+    font-size: 1.2rem;
+    gap: 2rem;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(b\ g);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+  #buttoncontainer {
+    display: flex;
+  }
+
+  .mainbuttons {
+    width: 15rem;
+    height: 15rem;
+    background-color: rgba(196, 239, 252, 0.5);
+    border: solid 0.2rem white;
+    border-radius: 1rem;
+  }
+
+  #restart {
+    color: rgb(178, 165, 255);
+    font-family: sans-serif;
+    background-color: rgba(196, 239, 252, 0.8);
+    border: solid 0.15rem white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+
+  #paper {
+    margin: 0 2rem 0 2rem;
+  }
+
+  #hydro, #dendro, #pyro {
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+  }
+
+  #hydro {
+    color: rgb(65, 185, 255);
+  }
+
+  #dendro {
+    color: rgb(117, 158, 123);
+  }
+
+  #pyro {
+    color: rgb(156, 86, 86);
+  }
   

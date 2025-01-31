@@ -9,16 +9,29 @@
 </head>
 
 <body>
-    <div id="scorecontainer">
-<p id="playerscore"></p>
-<p id="computerscore"></p>
-</div>
-<div id="buttoncontainer">
-<button id="rock" onclick="playRound('rock')">ROCK</button>
-<button id="paper" onclick="playRound('paper')">PAPER</button>
-<button id="scissors" onclick="playRound('scissors')">SCISSORS</button>
-<button id="restart">RESTART</button>
-</div>
+    <div id="maincontainer">
+        <div id="scorecontainer">
+            <p id="playerscore"></p>
+            <p id="computerscore"></p>
+        </div>
+        <div id="buttoncontainer">
+            <div id="dendro">
+                <p>Dendro</p>
+                <input type="image" src='dendro.png' id="rock" class="mainbuttons" onclick="playRound('rock')">
+            </div>
+            <div id="pyro">
+                <p>Pyro</p>
+                <input type="image" src='pyro.png' id="paper" class="mainbuttons" onclick="playRound('paper')">
+            </div>
+            <div id="hydro">
+                <p>Hydro</p>
+                <input type="image" src='Hydro.png' id="scissors" class="mainbuttons" onclick="playRound('scissors')">
+            </div>
+        </div>
+        <div id="restartcontainer">
+            <button id="restart">RESTART</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 
