@@ -4,10 +4,13 @@ let scissorsBtn = document.querySelector('#scissors')
 let restart = document.querySelector('#restart')
 let playerScore = 0
 let computerScore = 0
+let gameOver = false;
 
 
 // Plays a round everytime the player clicks one of the buttons, set to run the function with the paramater in HTML!!!
 function playRound(playerChoice) {
+
+    if (gameOver) return;
 
     let computerChoice = getComputerChoice();
 
@@ -32,21 +35,14 @@ function playRound(playerChoice) {
     // Game won function!!!!!11
     if (playerScore == 5) {
         alert("You win!");
+        gameOver = true;
+        disableButtons();
     } else if (computerScore == 5) {
         alert("You lose!");
+        gameOver = true;
+        disableButtons();
     }
     
-    // Reset the scores after a win or lose!!!
-    if (playerScore == 5 || computerScore == 5) {
-        playerScore = 0;
-        computerScore = 0;
-        document.getElementById("computerscore").innerHTML = "Restart!";
-        document.getElementById("playerscore").innerHTML = "Restart!";
-        rockBtn.disabled = true;
-        scissorsBtn.disabled = true;
-        paperBtn.disabled = true;
-      return;
-    }
 };
 
 // Function to get theeee computers choice, chooses a random number between 0-2!!
@@ -63,6 +59,12 @@ function getComputerChoice() {
     return computerNum;
 };
 
+function disableButtons() {
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorsBtn.disabled = true;
+}
+
 // Restart button to restart da game upon win, disables extra buttons to try n prevent game breaking
 restart.addEventListener('click', () => {
     playerScore = 0;
@@ -72,4 +74,5 @@ restart.addEventListener('click', () => {
     rockBtn.disabled = false;
     scissorsBtn.disabled = false;
     paperBtn.disabled = false;
+    gameOver = false;
 });
